@@ -8,6 +8,8 @@ ace.addCommand(require('./commands/ask'))
 ace.addCommand(require('./commands/colors'))
 ace.addCommand(require('./commands/icons'))
 ace.addCommand(require('./commands/load'))
+ace.addCommand(require('./commands/run-tasks'))
+
 // Boot ace to execute commands
 ace.wireUpWithCommander()
 ace.invoke()
