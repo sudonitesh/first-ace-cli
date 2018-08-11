@@ -3,15 +3,19 @@ const { Command } = require('@adonisjs/ace')
 class Greet extends Command {
 
   static get signature () {//describe command itself and arguments with flash
-     return 'hello'
+     return `
+      hello
+      { -f, --friendly: say a friendly greeting :)}
+      { -g, --grumpy-friendly: say a friendly greeting :()}
+     `
   }
   
   static get description () {
     return 'print hello on comsole'
   }
   
-  async handle () {
-    console.log(`Hello nitesh`)
+  async handle (args, { friendly, grumpyFriendly }) {
+    console.log(`Hello ${friendly ? 'friendly' : ""} Nitesh ${grumpyFriendly ? ':(' : ''} `)
   }
 
 }
