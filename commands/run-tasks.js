@@ -27,6 +27,12 @@ class RunTasks extends Command {
             task: () => this.waitASecond()
                 //wait a task
         },
+        {
+            title: 'REPEAT TO SKIP starting vscode',
+            skip: () => true,
+            task: () => this.waitASecond()
+                //wait a task
+        },
         // {
         //     title: 'setting package',
         //     task: () => this.waitASecond()
