@@ -24,7 +24,19 @@ class Greet extends Command {
         let anotherQ = await this.confirm('this is another question: want more? ', {default: false})
         console.log(anotherQ);
         if(anotherQ) {
-            console.log('fuck off');
+            // console.log('fuck off');
+            let like = await this.choice('which language you love? ', [
+                'py',
+                'js',
+                'cpp',
+                {
+                    name: 'c',
+                    value: 'hell'
+                }
+            ], 
+            'js'
+        )
+            console.log(like)
         } else {
             console.log('coool');
         }
