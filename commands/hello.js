@@ -7,13 +7,13 @@ class Greet extends Command {
       hello
       {name?=Stranger: greet your personal name} 
       { -f, --friendly: say a friendly greeting :)}
-      { -g, --grumpy-friendly: say a friendly greeting :()}
+      { -g, --grumpy-friendly: say a grumpy greeting :()}
      `
      //'?' i name to make it optional
   }
   
   static get description () {
-    return 'print hello on comsole'
+    return 'say helo to stranger or personal name'
   }
   
   async handle ({ name }, { friendly, grumpyFriendly }) {
