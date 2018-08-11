@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@adonisjs/ace": "^5.0.4",
-    "chalk": "^2.4.1"
+    "chalk": "^2.4.1",
+    "ora": "^3.0.0"
   }
 }
